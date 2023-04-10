@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+:root {
+  --font-family-russo-one: "Russo One", sans-serif;
+  --brand-color: #1ed760;
+  --sub-brand-color: #1ed75fca;
+  --secondary-color: #18102f;
+}
+body {
+  background-color: #13141b;
+  color: transparent;
+  background-image: url(images/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+img.logo {
+  max-width: 40px;
+}
+a span.logo-text {
+  font-family: var(--font-family-russo-one);
+  text-transform: capitalize;
+  color: var(--brand-color);
+}
+h1.main-headline {
+  color: var(--secondary-color);
+  font-size: 40px;
+  font-family: var(--font-family-russo-one);
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--brand-color);
+}
+p.sub-text {
+  font-family: var(--font-family-russo-one);
+  text-transform: capitalize;
+}
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 22px;
+  border: none;
+  border-radius: 25px;
+}
+.btn {
+  border-radius: 1.5rem;
+  padding: 9px 20px;
+}
+
+.btn-privious {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.navbar-toggler {
+  border: none;
+}
+.search-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.search-box input.form-control {
+  max-height: 52px;
+  border-radius: 0px;
+  font-family: var(--font-family-russo-one);
+}
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0px;
+  background-color: var(--sub-brand-color);
+  text-transform: uppercase;
+  font-family: var(--font-family-russo-one);
+}
+.single-result {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+/* ==SONG RESULT SECTION== */
+
+.songs-result-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.songs-result-section .search-results {
+  display: flex;
+  align-items: center;
+  width: 390px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+.songs-result-section .search-results .song-img-box {
+  flex: 1 0 100%;
+  max-width: 40%;
+}
+.songs-result-section .search-results .song-info-box {
+  flex: 1 0 100%;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 156px;
+  overflow: hidden;
+}
+/* ==SONG RESULT CARD== */
+
+img.track-img {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+}
+h2.song-name {
+  color: var(--brand-color);
+  font-size: 18px;
+  font-family: var(--font-family-russo-one);
+  text-transform: capitalize;
+
+  margin-top: 20px;
+  margin-left: 10px;
+}
+h2.song-name span {
+  margin-left: 5px;
+  position: relative;
+  top: -3px;
+}
+h4.singer-name {
+  color: #cccccc8d;
+  font-size: 18px;
+  font-family: var(--font-family-russo-one);
+  text-transform: capitalize;
+
+  margin-left: 10px;
+}
+
+h4.singer-name span {
+  margin-left: 5px;
+  position: relative;
+  top: -3px;
+}
+.song-info-box a.btn {
+  background: var(--brand-color);
+  font-family: var(--font-family-russo-one);
+  border-radius: 0px;
+  font-size: 13px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.song-info-box a.btn:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 767px) {
+  .search-box input.form-control {
+    max-height: 47px;
+    font-size: 14px;
+  }
+  .search-btn {
+    font-size: 14px;
+  }
+  .search-box input.form-control::placeholder {
+    font-size: 10px;
+  }
+  .songs-result-section {
+    row-gap: 5px;
+  }
+  .songs-result-section .search-results {
+    width: 47%;
+  }
+  .songs-result-section .search-results {
+    flex-direction: column;
+  }
+  .songs-result-section .search-results .song-img-box {
+    max-width: 100%;
+  }
+  .songs-result-section .search-results .song-info-box {
+    max-width: 100%;
+    /* height: 100%; */
+    width: 100%;
+  }
+  h2.song-name {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .songs-result-section .search-results {
+    width: 100%;
+  }
+}
